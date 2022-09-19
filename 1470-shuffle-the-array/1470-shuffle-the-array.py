@@ -3,7 +3,7 @@ class Solution:
         nums1 = nums[:n]
         nums2 = nums[n:]
         arry = list()
-        for i in range(len(nums[n:])):
+        for i in range(n):
             arry.append(nums1[i])
             arry.append(nums2[i])
         return arry
