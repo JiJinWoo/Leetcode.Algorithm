@@ -1,12 +1,14 @@
 class Solution:
     def minMovesToSeat(self, seats: List[int], students: List[int]) -> int:
-        result = 0
-        seat = sorted(seats)
-        student = sorted(students)
+        seats.sort()
+        students.sort()
+
+        result = 0 
+        
         for i in range(len(seats)):
-            if seat[i] > student[i]:
-                result += seat[i] - student[i]
+            if seats[i] > students[i]:
+                result += seats[i] - students[i]
             else:
-                result += student[i] - seat[i]
-                
+                result += students[i] - seats[i]
+        
         return result
