@@ -6,4 +6,3 @@ class Solution:
                 result.append(i)
             else:
                 return i
-                break
