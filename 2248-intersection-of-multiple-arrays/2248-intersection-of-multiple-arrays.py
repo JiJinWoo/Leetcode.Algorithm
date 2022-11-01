@@ -11,7 +11,7 @@ class Solution:
         for item in dct.items():
             if (item[1] % len(nums) == 0):
                 arr.append(item[0])
+
+        arr.sort()
         
-        res = sorted(arr)
-        
-        return res
+        return arr
