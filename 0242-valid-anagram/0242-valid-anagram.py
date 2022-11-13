@@ -1,9 +1,12 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        s_list = list(''.join(s))
-        t_list = list(''.join(t))
-
-        s_list.sort()
-        t_list.sort()
+        dct_s = defaultdict(int)
+        dct_t = defaultdict(int)
         
-        return s_list == t_list
+        for c in s:
+            dct_s[c] += 1
+
+        for c in t:
+            dct_t[c] += 1
+
+        return dct_s == dct_t
